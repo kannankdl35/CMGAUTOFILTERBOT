@@ -216,17 +216,23 @@ async def start(client, message):
 
                 if TRY_AGAIN_BTN == True:
 
-                    text = "**🕵️ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ᴊᴏɪɴ ᴍʏ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ ғɪʀsᴛ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ᴛʜᴇɴ ᴛʀʏ ᴀɢᴀɪɴ**"
+                    text = "**To get the movie file, you need to join our Cinemagram channel by clicking the 'ʙᴀᴄᴋᴜᴩ ᴄʜᴀɴɴᴇʟ' button. After joining, click the 'ᴛʀʏ ᴀɢᴀɪɴ' button to get the movie. 😊
+
+മൂവി ഫയൽ കിട്ടുന്നതിനായി താഴെ കാണുന്ന 'ʙᴀᴄᴋᴜᴩ ᴄʜᴀɴɴᴇʟ' ബട്ടനിൽ ക്ലിക്ക് ചെയ്ത് ചാനലിൽ ജോയിൻ ആയ ശേഷം, 'ᴛʀʏ ᴀɢᴀɪɴ' ബട്ടൺ ക്ലിക്ക് ചെയുക. 😊**"
 
                 else:
 
                     await db.set_msg_command(message.from_user.id, com=message.command[1])
 
-                    text = "**🕵️ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ᴊᴏɪɴ ᴍʏ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ ғɪʀsᴛ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ**"
+                    text = "**To get the movie file, you need to join our Cinemagram channel by clicking the 'ʙᴀᴄᴋᴜᴩ ᴄʜᴀɴɴᴇʟ' button. After joining, click the 'ᴛʀʏ ᴀɢᴀɪɴ' button to get the movie. 😊
+
+മൂവി ഫയൽ കിട്ടുന്നതിനായി താഴെ കാണുന്ന 'ʙᴀᴄᴋᴜᴩ ᴄʜᴀɴɴᴇʟ' ബട്ടനിൽ ക്ലിക്ക് ചെയ്ത് ചാനലിൽ ജോയിൻ ആയ ശേഷം, 'ᴛʀʏ ᴀɢᴀɪɴ' ബട്ടൺ ക്ലിക്ക് ചെയുക. 😊**"
 
             else:
 
-                text = "**🕵️ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ᴊᴏɪɴ ᴍʏ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ ғɪʀsᴛ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ᴛʜᴇɴ ᴛʀʏ ᴀɢᴀɪɴ**"
+                text = "**To get the movie file, you need to join our Cinemagram channel by clicking the 'ʙᴀᴄᴋᴜᴩ ᴄʜᴀɴɴᴇʟ' button. After joining, click the 'ᴛʀʏ ᴀɢᴀɪɴ' button to get the movie. 😊
+
+മൂവി ഫയൽ കിട്ടുന്നതിനായി താഴെ കാണുന്ന 'ʙᴀᴄᴋᴜᴩ ᴄʜᴀɴɴᴇʟ' ബട്ടനിൽ ക്ലിക്ക് ചെയ്ത് ചാനലിൽ ജോയിൻ ആയ ശേഷം, 'ᴛʀʏ ᴀɢᴀɪɴ' ബട്ടൺ ക്ലിക്ക് ചെയുക. 😊**"
 
             await client.send_message(
 
@@ -2793,3 +2799,4 @@ async def purge_requests(client, message):
             disable_web_page_preview=True
 
                     )
+
