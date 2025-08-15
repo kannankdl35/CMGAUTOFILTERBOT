@@ -10,8 +10,6 @@ class script(object):
 
     START_TXT = """<b> ʜᴇʟʟᴏ {} 👋
 
-
-
 <blockquote>ꜱᴇɴᴅ ʜᴇʀᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏꜰ ᴛʜᴇ ᴍᴏᴠɪᴇ ᴏʀ ꜱᴇʀɪᴇꜱ ʏᴏᴜ ᴡᴀɴᴛ ᴡɪᴛʜ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ ɢᴏᴏɢʟᴇ ꜱᴘᴇʟʟɪɴɢ...</blockquote></b>"""
 
 
@@ -1524,4 +1522,5 @@ Example:- /set_caption 📕 File Name: {filename}
 
 
     
+
 
