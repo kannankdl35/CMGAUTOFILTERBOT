@@ -33,19 +33,12 @@ class script(object):
     
 
 ‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/{}>{}</a>
-
 ‣ ᴍʏ ʙᴇsᴛ ғʀɪᴇɴᴅ : <a href='tg://settings'>ᴛʜɪs ᴘᴇʀsᴏɴ</a> 
-
 ‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href={}>ᴏᴡɴᴇʀ</a> 
-
 ‣ ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a> 
-
 ‣ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a> 
-
 ‣ ᴅᴀᴛᴀ ʙᴀsᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a> 
-
 ‣ ʙᴏᴛ sᴇʀᴠᴇʀ : <a href='https://heroku.com'>ʜᴇʀᴏᴋᴜ</a> 
-
 ‣ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ2.7.1 [sᴛᴀʙʟᴇ]></b>"""
 
 
@@ -75,9 +68,7 @@ class script(object):
 
 
 - Yᴏᴜ Cʀᴇᴀᴛᴇ Yᴏᴜʀ Oᴡɴ Cʟᴏɴᴇ Bᴏᴛ Bʏ /clone Cᴏᴍᴍᴀɴᴅ 
-
 - Yᴏᴜ Cᴀɴ Bʀᴏᴀᴅᴄᴀsᴛ Iɴ Yᴏᴜʀ Cʟᴏɴᴇ Bᴏᴛs
-
 - Aɴᴅ Mɪʟʟɪᴏɴ Oғ Fɪʟᴇs Iɴᴅᴇx Aʟʀᴇᴀᴅʏ Nᴏ Nᴇᴇᴅ Tᴏ Aᴅᴅ Aɴʏ Fɪʟᴇ
 
 
@@ -303,11 +294,8 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
     SEC_STATUS_TXT = """<b>★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
 
 ★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
-
 ★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
-
 ★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
-
 ★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code></b>"""
 
     
@@ -319,7 +307,6 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 USERS DB :-
 
 ★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
-
 ★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
 
 
@@ -327,9 +314,7 @@ USERS DB :-
 FILE FIRST DB :-
 
 ★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
-
 ★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
-
 ★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
 
 
@@ -337,9 +322,7 @@ FILE FIRST DB :-
 FILE SECOND DB :-
 
 ★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
-
 ★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
-
 ★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{} MB</code>
 
 
@@ -355,9 +338,7 @@ OTHER DB :-
     LOG_TEXT_G = """#NewGroup
 
 Gʀᴏᴜᴘ = {}(<code>{}</code>)
-
 Tᴏᴛᴀʟ Mᴇᴍʙᴇʀs = <code>{}</code>
-
 Aᴅᴅᴇᴅ Bʏ - {}"""
 
 
@@ -365,75 +346,48 @@ Aᴅᴅᴇᴅ Bʏ - {}"""
     LOG_TEXT_P = """#NewUser
 
 ID - <code>{}</code>
-
 Nᴀᴍᴇ - {}"""
 
 
 
     ALRT_TXT = """ʜᴇʟʟᴏ {},
-
-ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,
-
-ʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ..."""
+ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ, ʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ..."""
 
 
 
     OLD_ALRT_TXT = """ʜᴇʏ {},
-
-ʏᴏᴜ ᴀʀᴇ ᴜꜱɪɴɢ ᴏɴᴇ ᴏꜰ ᴍʏ ᴏʟᴅ ᴍᴇꜱꜱᴀɢᴇꜱ, 
-
-ᴘʟᴇᴀꜱᴇ ꜱᴇɴᴅ ᴛʜᴇ ʀᴇQᴜᴇꜱᴛ ᴀɢᴀɪɴ."""
+ʏᴏᴜ ᴀʀᴇ ᴜꜱɪɴɢ ᴏɴᴇ ᴏꜰ ᴍʏ ᴏʟᴅ ᴍᴇꜱꜱᴀɢᴇꜱ, ᴘʟᴇᴀꜱᴇ ꜱᴇɴᴅ ᴛʜᴇ ʀᴇQᴜᴇꜱᴛ ᴀɢᴀɪɴ."""
 
 
 
-    CUDNT_FND = """ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ {}
-
-ᴅɪᴅ ʏᴏᴜ ᴍᴇᴀɴ ᴀɴʏ ᴏɴᴇ ᴏꜰ ᴛʜᴇꜱᴇ?"""
+    CUDNT_FND = """ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ {} ᴅɪᴅ ʏᴏᴜ ᴍᴇᴀɴ ᴀɴʏ ᴏɴᴇ ᴏꜰ ᴛʜᴇꜱᴇ?"""
 
 
 
-    I_CUDNT = """<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛ {} 😕
-
-
-
-ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ 😃
+    I_CUDNT = """<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛ {} 😕 ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ 😃
 
 
 
 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ 👇
 
-
-
 ᴇxᴀᴍᴘʟᴇ : Uncharted or Uncharted 2022 or Uncharted En
-
-
 
 ꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ 👇
 
-
-
 ᴇxᴀᴍᴘʟᴇ : Loki S01 or Loki S01E04 or Lucifer S03E24
-
-
 
 🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)</b>"""
 
 
-
-    I_CUD_NT = """ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ {}.
-
-ᴘʟᴇᴀꜱᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ ꜱᴘᴇʟʟɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ ᴏʀ ɪᴍᴅʙ..."""
+    I_CUD_NT = """ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ {}. ᴘʟᴇᴀꜱᴇ ᴄʜᴇᴄᴋ ᴛʜᴇ ꜱᴘᴇʟʟɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ ᴏʀ ɪᴍᴅʙ..."""
 
 
 
     MVE_NT_FND = """ᴍᴏᴠɪᴇ ɴᴏᴛ ꜰᴏᴜɴᴅ ɪɴ ᴅᴀᴛᴀʙᴀꜱᴇ..."""
 
-
-
     TOP_ALRT_MSG = """Cʜᴇᴄᴋɪɴɢ Fᴏʀ Mᴏᴠɪᴇ Iɴ Dᴀᴛᴀʙᴀsᴇ..."""
 
-
-
+ 
     MELCOW_ENG = """<b>Hᴇʟʟᴏ {} 😍, Aɴᴅ Wᴇʟᴄᴏᴍᴇ Tᴏ {} Gʀᴏᴜᴘ ❤️</b>"""
 
 
@@ -446,105 +400,58 @@ Nᴀᴍᴇ - {}"""
 
 
 
-    REQINFO = """
-
-⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠
-
-
+    REQINFO = """⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠
 
 ᴀꜰᴛᴇʀ 5 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ
 
-
-
 ɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ"""
-
 
 
     SELECT = """sᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴘʀᴇғᴇʀʀᴇᴅ ʟᴀɴɢᴜᴀɢᴇ, ǫᴜᴀʟɪᴛʏ, sᴇᴀsᴏɴ ᴀɴᴅ ᴇᴘɪsᴏᴅᴇ"""
 
 
 
-    SINFO = """
-
-🫣 For Movie Join First Then Click On Try Again Button 😅"""
+    SINFO = """ 🫣 For Movie Join First Then Click On Try Again Button 😅"""
 
 
 
     NORSLTS = """ 
 
 ★ #𝗡𝗼𝗥𝗲𝘀𝘂𝗹𝘁𝘀 ★
-
-
-
 𝗜𝗗 <b>: {}</b>
-
-
-
 𝗡𝗮𝗺𝗲 <b>: {}</b>
-
-
-
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
 
 
     CAPTION = """<b>📂 ғɪʟᴇɴᴀᴍᴇ</b> : <i>{file_name}</i> 
 
-
-
 <b>⚙️ sɪᴢᴇ</b> : <i>{file_size}</i>
 
-
-
 <blockquote>𝗚𝗿𝗼𝘂𝗽 ➠ @CinemagramGrp
-
 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 ➠ @CmgChnl
-
 𝗟𝗶𝗻𝗸𝘀 ➠ @Cinemagram_Links
 
-
-
-ʏᴏᴜ ᴄᴀɴ ᴀʟꜱᴏ ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ ɪɴ ᴛʜᴇ ʙᴏᴛ'ꜱ ᴘᴍ. ɪᴛ ᴏꜰꜰᴇʀꜱ ᴍᴏʀᴇ ᴘʀɪᴠᴀᴄʏ. ꜱʜᴀʀᴇ ᴛʜᴇ ʙᴏᴛ ʟɪɴᴋ ᴡɪᴛʜ ʏᴏᴜʀ ꜰʀɪᴇɴᴅꜱ
-
-
+ʏᴏᴜ ᴄᴀɴ ᴀʟꜱᴏ ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ ɪɴ ᴛʜᴇ ʙᴏᴛ'ꜱ ᴘᴍ. ɪᴛ ᴏꜰꜰᴇʀꜱ ᴍᴏʀᴇ ᴘʀɪᴠᴀᴄʏ. ꜱʜᴀʀᴇ ᴛʜᴇ ʙᴏᴛ ʟɪɴᴋ ᴡɪᴛʜ ʏᴏᴜʀ ꜰʀɪᴇɴᴅꜱ.
 
 𝗕𝗼𝘁 𝗹𝗶𝗻𝗸 ➠ @Cmg_MovieBot</blockquote>""" 
 
 
 
-    IMDB_TEMPLATE_TXT = """
-
-<b>Query: {qurey}
-
-
+    IMDB_TEMPLATE_TXT = """<b>Query: {qurey}
 
 IMDb Data:
 
-
-
 <b>🏷 Title</b>: <a href={url}>{title}</a>
-
 🎭 Genres: {genres}
-
 📆 Year: <a href={url}/releaseinfo>{year}</a>
-
 🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.)
-
 ☀️ Languages : <code>{languages}</code>
-
 📀 RunTime: {runtime} Minutes
-
 📆 Release Info : {release_date}
-
 🎛 Countries : <code>{countries}</code>
 
-
-
-
-
 ⏰Result Shown in: {remaining_seconds} <i>seconds</i> 🔥
-
-
 
 Requested by : {message.from_user.mention}</b>"""
 
@@ -558,7 +465,7 @@ Requested by : {message.from_user.mention}</b>"""
 
     GFILTER_TXT = """
 
-<b>Wᴇʟᴄᴏᴍᴇ ᴛᴏ Gʟᴏʙᴀʟ Fɪʟᴛᴇʀs. Gʟᴏʙᴀʟ Fɪʟᴛᴇʀs ᴀʀᴇ ᴛʜᴇ ғɪʟᴛᴇʀs sᴇᴛ ʙʏ ʙᴏᴛ ᴀᴅᴍɪɴs ᴡʜɪᴄʜ ᴡɪʟʟ ᴡᴏʀᴋ ᴏɴ ᴀʟʟ ɢʀᴏᴜᴘs.</b>
+<b>Wᴇʟᴄᴏᴍᴇ ᴛᴏ Gʟᴏʙᴀʟ Fɪʟᴛᴇʀs. Gʟᴏʙᴀʟ Fɪʟᴛᴇʀs ᴀʀᴇ ᴛʜᴇ ғɪʟᴛᴇʀs sᴇᴛ ʙʏ ʙᴏᴛ ᴀᴅᴍɪɴs ᴡʜɪᴄʜ ᴡɪʟʟ ᴡᴏʀᴋ ᴏɴ ᴀʟʟ ɢʀᴏᴜᴘs</b>
 
     
 
@@ -699,15 +606,10 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
     PROGRESS_BAR = """\n
 
 ╭━━━━❰ File Is Renaming... ❱━➣
-
 ┣⪼ 🗂️ : {1} | {2}
-
 ┣⪼ ⏳️ : {0}%
-
 ┣⪼ 🚀 : {3}/s
-
 ┣⪼ ⏱️ : {4}
-
 ╰━━━━━━━━━━━━━━━➣ """
 
   
@@ -1522,5 +1424,6 @@ Example:- /set_caption 📕 File Name: {filename}
 
 
     
+
 
 
