@@ -1692,7 +1692,7 @@ async def settings(client, message):
 
                 InlineKeyboardButton(
 
-                    'ShortLink',
+                    'Aɴʏ Dᴏᴜʙᴛꜱ?',
 
                     callback_data=f'setgs#is_shortlink#{settings["is_shortlink"]}#{grp_id}',
 
@@ -2252,7 +2252,7 @@ async def onshortlink(bot, message):
 
     if not settings['shortlink']:
 
-        return await message.reply_text("**First Add Your Shortlink Url And Api By /shortlink Command, Then Turn Me On.**")
+        return await message.reply_text("**If You Have Any Doubt, Feel Free to Ask to The Admin - @CMG_4dmin**")
 
     await save_group_settings(grpid, 'is_shortlink', True)
 
@@ -2793,5 +2793,6 @@ async def purge_requests(client, message):
             disable_web_page_preview=True
 
                     )
+
 
 
