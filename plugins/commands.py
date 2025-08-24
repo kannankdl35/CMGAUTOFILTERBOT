@@ -57,6 +57,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
 
         buttons = [[
+            
+                InlineKeyboardButton('▣ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ▣', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            
+            ],[
 
                 InlineKeyboardButton('✗  ᴊᴏɪɴ ᴍᴏᴠɪᴇ ɢʀᴏᴜᴩ  ✗', url=GRP_LNK)
 
@@ -99,6 +103,10 @@ async def start(client, message):
         if PREMIUM_AND_REFERAL_MODE == True:
 
             buttons = [[
+            
+                InlineKeyboardButton('▣ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ▣', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            
+            ],[
 
                 InlineKeyboardButton('✗  ᴊᴏɪɴ ᴍᴏᴠɪᴇ ɢʀᴏᴜᴩ  ✗', url=GRP_LNK)
 
@@ -117,6 +125,10 @@ async def start(client, message):
         else:
 
             buttons = [[
+            
+                InlineKeyboardButton('▣ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ▣', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            
+            ],[
 
                 InlineKeyboardButton('✗  ᴊᴏɪɴ ᴍᴏᴠɪᴇ ɢʀᴏᴜᴩ  ✗', url=GRP_LNK)
 
@@ -2793,6 +2805,7 @@ async def purge_requests(client, message):
             disable_web_page_preview=True
 
                     )
+
 
 
 
