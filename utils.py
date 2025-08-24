@@ -636,15 +636,15 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                     protect_content=True if ident == "filep" else False,
                     reply_markup=InlineKeyboardMarkup(
                         [[
-                            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                            InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                            InlineKeyboardButton('Lɪɴᴋꜱ', url=GRP_LNK),
+                            InlineKeyboardButton('Nᴇᴡ Mᴏᴠɪᴇꜱ', url=CHNL_LNK)
                         ],[
                             InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url=OWNER_LNK)
                         ]]
                     )
                 )
     except UserIsBlocked:
-        await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀʜɴ !', show_alert=True)
+        await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ꜰɪʀꜱᴛ !', show_alert=True)
     except PeerIdInvalid:
         await query.answer('Hᴇʏ, Sᴛᴀʀᴛ Bᴏᴛ Fɪʀsᴛ Aɴᴅ Cʟɪᴄᴋ Sᴇɴᴅ Aʟʟ', show_alert=True)
     except Exception as e:
@@ -736,3 +736,4 @@ async def get_seconds(time_string):
         return value * 86400 * 365
     else:
         return 0
+
