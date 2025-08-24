@@ -10,7 +10,9 @@ class script(object):
 
     START_TXT = """<b> ʜᴇʟʟᴏ {} 👋
 
-<blockquote>ꜱᴇɴᴅ ʜᴇʀᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏꜰ ᴛʜᴇ ᴍᴏᴠɪᴇ ᴏʀ ꜱᴇʀɪᴇꜱ ʏᴏᴜ ᴡᴀɴᴛ ᴡɪᴛʜ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ ɢᴏᴏɢʟᴇ ꜱᴘᴇʟʟɪɴɢ...</blockquote></b>"""
+<blockquote>ꜱᴇɴᴅ ʜᴇʀᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏꜰ ᴛʜᴇ ᴍᴏᴠɪᴇ ᴏʀ ꜱᴇʀɪᴇꜱ ʏᴏᴜ ᴡᴀɴᴛ ᴡɪᴛʜ ᴛʜᴇ ᴄᴏʀʀᴇᴄᴛ ɢᴏᴏɢʟᴇ ꜱᴘᴇʟʟɪɴɢ.</blockquote>
+
+<blockquote>ɪ ᴄᴀɴ ᴀʟꜱᴏ ᴩʀᴏᴠɪᴅᴇ ᴍᴏᴠɪᴇꜱ ɪɴ ʏᴏᴜʀ ᴏᴡɴ ɢʀᴏᴜᴩ. ᴊᴜꜱᴛ ᴀᴅᴅ ᴍᴇ ᴀꜱ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴩ ᴜꜱɪɴɢ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ.</blockquote></b>"""
 
 
 
@@ -29,8 +31,6 @@ class script(object):
 
 
     ABOUT_TXT = """<b><blockquote>⍟───[ ᴍʏ ᴅᴇᴛᴀɪʟꜱ ]───⍟</blockquote>
-
-    
 
 ‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/{}>{}</a>
 ‣ ᴍʏ ʙᴇsᴛ ғʀɪᴇɴᴅ : <a href='tg://settings'>ᴛʜɪs ᴘᴇʀsᴏɴ</a> 
@@ -1420,6 +1420,7 @@ Example:- /set_caption 📕 File Name: {filename}
 
 
     
+
 
 
 
