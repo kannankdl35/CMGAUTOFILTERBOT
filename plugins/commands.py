@@ -1704,7 +1704,7 @@ async def settings(client, message):
 
                 InlineKeyboardButton(
 
-                    'Aɴʏ Dᴏᴜʙᴛꜱ?',
+                    'Sʜᴏʀᴛ Lɪɴᴋ',
 
                     callback_data=f'setgs#is_shortlink#{settings["is_shortlink"]}#{grp_id}',
 
@@ -2138,7 +2138,7 @@ async def shortlink(bot, message):
 
     if chat_type == enums.ChatType.PRIVATE:
 
-        return await message.reply_text(f"<b>Hey {message.from_user.mention}, This command only works on groups !\n\n<u>Follow These Steps to Connect Shortener:</u>\n\n1. Add Me in Your Group with Full Admin Rights\n\n2. After Adding in Grp, Set your Shortener\n\nSend this command in your group\n\n—> /shortlink ""{your_shortener_website_name} {your_shortener_api}\n\n#Sample:-\n/shortlink kpslink.in CAACAgUAAxkBAAEJ4GtkyPgEzpIUC_DSmirN6eFWp4KInAACsQoAAoHSSFYub2D15dGHfy8E\n\nThat's it!!! Enjoy Earning Money 💲\n\n[[[ Trusted Earning Site - https://kpslink.in]]]\n\nIf you have any Doubts, Feel Free to Ask me - @kingvj01\n\n(Puriyala na intha contact la message pannunga - @kngvj01)</b>")
+        return await message.reply_text(f"<b>❌ ഈ പണി സ്റ്റീഫൻ ചെയ്യില്ല. നീയും... 🫵</b>")
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
 
@@ -2170,7 +2170,7 @@ async def shortlink(bot, message):
 
     except:
 
-        return await message.reply_text("<b>Command Incomplete :(\n\nGive me a shortener website link and api along with the command !\n\nFormat: <code>/shortlink kpslink.in e3d82cdf8f9f4783c42170b515d1c271fb1c4500</code></b>")
+        return await message.reply_text("<b>❌ ഈ പണി സ്റ്റീഫൻ ചെയ്യില്ല. നീയും... 🫵</b>")
 
     reply = await message.reply_text("<b>Please Wait...</b>")
 
@@ -2204,7 +2204,7 @@ async def offshortlink(bot, message):
 
         title = message.chat.title
 
-    else:
+    else: 
 
         return
 
@@ -2264,7 +2264,7 @@ async def onshortlink(bot, message):
 
     if not settings['shortlink']:
 
-        return await message.reply_text("**If You Have Any Doubt, Feel Free to Ask to The Admin - @CMG_4dmin**")
+        return await message.reply_text("**❌ ഈ പണി സ്റ്റീഫൻ ചെയ്യില്ല. നീയും... 🫵**")
 
     await save_group_settings(grpid, 'is_shortlink', True)
 
@@ -2805,6 +2805,7 @@ async def purge_requests(client, message):
             disable_web_page_preview=True
 
                     )
+
 
 
 
