@@ -6,7 +6,7 @@ import re
 from pymongo.errors import DuplicateKeyError
 import motor.motor_asyncio
 from pymongo import MongoClient
-from info import DATABASE_NAME, USER_DB_URI, OTHER_DB_URI, CUSTOM_FILE_CAPTION, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, BUTTON_MODE, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER, SHORTLINK_API, SHORTLINK_URL, SHORTLINK_MODE, TUTORIAL, IS_TUTORIAL
+from info import DATABASE_NAME, USER_DB_URI, OTHER_DB_URI, CUSTOM_FILE_CAPTION, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, BUTTON_MODE, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER
 import time
 import datetime
 
@@ -48,12 +48,7 @@ default_setgs = {
     'max_btn': MAX_BTN,
     'template': IMDB_TEMPLATE,
     'caption': CUSTOM_FILE_CAPTION,
-    'shortlink': SHORTLINK_URL,
-    'shortlink_api': SHORTLINK_API,
-    'is_shortlink': SHORTLINK_MODE,
     'fsub': None,
-    'tutorial': TUTORIAL,
-    'is_tutorial': IS_TUTORIAL
 }
 
 
@@ -111,9 +106,6 @@ class Database:
             'bot_id': bot_id,
             'bot_token': bot_token,
             'user_id': user_id,
-            'url': None,
-            'api': None,
-            'tutorial': None,
             'update_channel_link': None
         }
         await self.bot.insert_one(settings)
@@ -309,3 +301,4 @@ class Database:
     
 
 db = Database(USER_DB_URI, DATABASE_NAME)
+
