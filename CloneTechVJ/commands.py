@@ -13,8 +13,7 @@ from database.ia_filterdb import col, sec_col, get_file_details, unpack_new_file
 from database.users_chats_db import db
 from CloneTechVJ.database.clone_bot_userdb import clonedb
 from info import *
-from shortzy import Shortzy
-from utils import get_size, temp, get_seconds, get_clone_shortlink
+from utils import get_size, temp, get_seconds
 logger = logging.getLogger(__name__)
 
 @Client.on_message(filters.command("start") & filters.incoming)
@@ -62,14 +61,8 @@ async def start(client, message):
     if data.startswith("sendfiles"):
         chat_id = int("-" + file_id.split("-")[1])
         userid = message.from_user.id if message.from_user else None
-        g = await get_clone_shortlink(f"https://telegram.me/{me.username}?start=allfiles_{file_id}", cd["url"], cd["api"])
-        t = cd["tutorial"]
-        btn = [[
-            InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
-        ],[
-            InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=t)
-        ]]
-        k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Get All Files in a Single Click!!!\n\n📂 ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 5 mins to avoid copyrights. Save the link to Somewhere else</i></b>", reply_markup=InlineKeyboardMarkup(btn))
+        g = f"https://telegram.me/{me.username}?start=allfiles_{file_id}"
+        k = await client.send_message(chat_id=message.from_user.id,text=f"<b>Get All Files in a Single Click!!!\n\n📂 ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 5 mins to avoid copyrights. Save the link to Somewhere else</i></b>")
         await asyncio.sleep(300)
         await k.edit("<b>Your message is successfully deleted!!!</b>")
         return
@@ -79,14 +72,8 @@ async def start(client, message):
         user = message.from_user.id
         files_ = await get_file_details(file_id)
         files = files_
-        g = await get_clone_shortlink(f"https://telegram.me/{me.username}?start=file_{file_id}", cd["url"], cd["api"]) 
-        t = cd["tutorial"]
-        btn = [[
-            InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
-        ],[
-            InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=t)
-        ]]
-        k = await client.send_message(chat_id=user,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files['file_name']}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files['file_size'])}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i></b>", reply_markup=InlineKeyboardMarkup(btn))
+        g = f"https://telegram.me/{me.username}?start=file_{file_id}"
+        k = await client.send_message(chat_id=user,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files['file_name']}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files['file_size'])}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i></b>")
         await asyncio.sleep(1200)
         await k.edit("<b>Your message is successfully deleted!!!</b>")
         return
@@ -132,21 +119,6 @@ async def start(client, message):
             await x.delete()
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
         return    
-    elif data.startswith("files"):
-        if cd['url']:
-            files_ = await get_file_details(file_id)
-            files = files_
-            g = await get_clone_shortlink(f"https://telegram.me/{me.username}?start=file_{file_id}", cd["url"], cd["api"])
-            t = cd["tutorial"]
-            btn = [[
-                InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
-            ],[
-                InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=t)
-            ]]
-            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files['file_name']}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files['file_size'])}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i></b>", reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(1200)
-            await k.edit("<b>Your message is successfully deleted!!!</b>")
-            return
     user = message.from_user.id
     files_ = await get_file_details(file_id)           
     if not files_:
@@ -188,27 +160,11 @@ async def settings(client, message):
     owner = await db.get_bot(me.id)
     if owner["user_id"] != message.from_user.id:
         return
-    url = await client.ask(message.chat.id, "<b>Now Send Me Your Shortlink Site Domain Or Url Without https://</b>")
-    api = await client.ask(message.chat.id, "<b>Now Send Your Api</b>")
-    try:
-        shortzy = Shortzy(api_key=api.text, base_site=url.text)
-        link = 'https://t.me/VJ_Botz'
-        await shortzy.convert(link)
-    except Exception as e:
-        await message.reply(f"**Error In Converting Link**\n\n<code>{e}</code>\n\n**Start The Process Again By - /settings**", reply_markup=InlineKeyboardMarkup(btn))
-        return
-    tutorial = await client.ask(message.chat.id, "<b>Now Send Me Your How To Open Link means Tutorial Link.</b>")
-    if not tutorial.text.startswith(('https://', 'http://')):
-        await message.reply("**Invalid Link. Start The Process Again By - /settings**")
-        return 
     link = await client.ask(message.chat.id, "<b>Now Send Me Your Update Channel Link Which Is Shown In Your Start Button And Below File Button.</b>")
     if not link.text.startswith(('https://', 'http://')):
         await message.reply("**Invalid Link. Start The Process Again By - /settings**")
         return 
     data = {
-        'url': url.text,
-        'api': api.text,
-        'tutorial': tutorial.text,
         'update_channel_link': link.text
     }
     await db.update_bot(me.id, data)
@@ -220,13 +176,10 @@ async def reset_settings(client, message):
     owner = await db.get_bot(me.id)
     if owner["user_id"] != message.from_user.id:
         return
-    if owner["url"] == None:
+    if owner["update_channel_link"] == None:
         await message.reply("**No Settings Found.**")
     else:
         data = {
-            'url': None,
-            'api': None,
-            'tutorial': None,
             'update_channel_link': None
         }
         await db.update_bot(me.id, data)
@@ -240,3 +193,4 @@ async def stats(client, message):
     totalsec = sec_col.count_documents({})
     total = int(filesp) + int(totalsec)
     await message.reply(f"**Total Files : {total}\n\nTotal Users : {total_users}**")
+
