@@ -5,6 +5,8 @@
 import re, base64, json
 from struct import pack
 from difflib import SequenceMatcher
+from datetime import datetime, timedelta
+from bson import ObjectId
 from pyrogram.file_id import FileId
 from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
@@ -212,6 +214,30 @@ async def get_bad_files(query, file_type=None, use_filter=False):
 
 async def get_file_details(query):
     return col.find_one({'file_id': query}) or sec_col.find_one({'file_id': query})
+
+async def get_recent_files(days=3, max_results=300):
+    """
+    Return files indexed within the last `days` days, newest first.
+
+    No schema change / extra 'created_at' field is needed: every MongoDB
+    ObjectId already embeds its own creation timestamp in its first 4 bytes,
+    so we build a cutoff ObjectId for "now - days" and match anything newer.
+    Used by the /movies and /series commands.
+    """
+    cutoff_id = ObjectId.from_datetime(datetime.utcnow() - timedelta(days=days))
+    query = {'_id': {'$gte': cutoff_id}}
+
+    files = []
+    collections = [col, sec_col] if MULTIPLE_DATABASE else [col]
+    for collection in collections:
+        cursor = collection.find(query).sort('_id', -1).limit(max_results)
+        for file in cursor:
+            files.append(file)
+
+    # When pulling from two databases, re-sort the merged list so results
+    # from both collections are interleaved newest-first.
+    files.sort(key=lambda f: f['_id'], reverse=True)
+    return files[:max_results]
 
 def encode_file_id(s: bytes) -> str:
     r = b""
