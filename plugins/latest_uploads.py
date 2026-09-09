@@ -36,6 +36,18 @@ SERIES_PATTERN = re.compile(
 # it off and keep just the title (+ year) for grouping/de-duplication.
 QUALITY_SPLIT = re.compile(r'\b(\d{3,4}p|4K)\b', re.IGNORECASE)
 
+# Same idea for series episodes, but also cuts at the season/episode marker
+# (whichever comes first: S01E02, quality tag, etc.) so every episode of the
+# same show collapses to just "Title Year" instead of one entry per episode.
+SERIES_CUT_PATTERN = re.compile(
+    r'(S\d{1,2}[\s\.\-_]?E\d{1,3})'      # S01E02, S01.E02, S1E2
+    r'|(Season[\s\.\-_]?\d{1,2})'        # Season 1, Season.02
+    r'|(\d{1,2}x\d{1,3})'                # 1x01
+    r'|(\bEP?[\s\.\-_]?\d{1,3}\b)'       # EP01, E01
+    r'|(\d{3,4}p|4K)',                   # 1080p, 720p, 4K
+    re.IGNORECASE
+)
+
 # Pulls a trailing "Title Year" apart so it can be redisplayed as "Title (Year)".
 YEAR_SPLIT = re.compile(r'^(.*?)\s+((?:19|20)\d{2})$')
 
@@ -70,6 +82,21 @@ def normalize_title(file_name: str) -> str:
     return cleaned or "Unknown"
 
 
+def normalize_series_title(file_name: str) -> str:
+    """
+    Same as normalize_title(), but for series: cuts at the season/episode
+    marker OR the quality tag, whichever appears first, so "The Gentlemen
+    2024 S02E08 1080p ..." and "The Gentlemen 2024 S02E07 720p ..." both
+    normalize to just "The Gentlemen 2024" instead of staying per-episode.
+    """
+    cleaned = clean_title(file_name)
+    match = SERIES_CUT_PATTERN.search(cleaned)
+    if match:
+        cleaned = cleaned[:match.start()]
+    cleaned = re.sub(r'[\s\-\.]+$', '', cleaned).strip()
+    return cleaned or "Unknown"
+
+
 def display_title(normalized: str) -> str:
     """'One Night Only 2026' -> 'One Night Only (2026)' for the numbered list."""
     m = YEAR_SPLIT.match(normalized)
@@ -93,10 +120,13 @@ async def build_list_text(kind: str) -> str:
     matched = [f for f in files if is_series(f.get('file_name', '')) == wanted_series]
 
     # De-duplicate to one entry per title, keeping newest-first order.
+    # Series use their own normalizer so every episode of a show collapses
+    # into one entry; movies keep the exact behavior they already had.
+    normalizer = normalize_series_title if wanted_series else normalize_title
     order = []
     seen = set()
     for f in matched:
-        title = normalize_title(f.get('file_name', ''))
+        title = normalizer(f.get('file_name', ''))
         if title not in seen:
             seen.add(title)
             order.append(title)
