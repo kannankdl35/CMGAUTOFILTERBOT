@@ -2121,7 +2121,7 @@ async def auto_filter(client, name, msg, reply_msg, ai_search, spoll=False):
                 if fuzzy_files:
                     files, offset, total_results = fuzzy_files, fuzzy_offset, fuzzy_total
                 else:
-                    return await reply_msg.edit_text(f"**⚠️ No File Found For Your Query - {name}**\n**Make Sure Spelling Is Correct.**")
+                    return await reply_msg.edit_text(script.I_CUDNT)
         else:
             return
     else:
